@@ -1,9 +1,14 @@
 #encoding UTF-8
 class EventsController < ApplicationController
-  before_filter :set_event, except: [:index, :new, :create]
+  before_filter :set_event, except: [:index, :all_events, :new, :create]
 
   def index
-    @events = Event.where("event_date >= ?", Date.today).order("event_date asc")
+    @q = Event.where("event_date >= ?", Date.today).ransack(params[:q])
+    @events = @q.result(distinct: true).order("event_date asc")
+  end
+
+  def all_events
+    @events = Event.all.order("event_date asc")
   end
 
   def new

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   resources :events
+  get "/all_events", to: "events#all_events"
 
   root 'homepage#index'
   # The priority is based upon order of creation: first created -> highest priority.
