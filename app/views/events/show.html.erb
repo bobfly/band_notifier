@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-header">
+    Uredi svirku <%= @event.name %>
+  </div>
+  <div class="card-block">
+    <%= form_for @event do |f| %>
+		<div class="form-group">
+			<%= f.label "Datum", class: "label-control" %>
+			<%= f.date_select :event_date, {}, class: "form-control", disabled: true %>
+		</div>
+		<div class="form-group">
+			<%= f.label "Naziv", class: "label-control" %>
+			<%= f.text_field :name, class:"form-control", disabled: true %>
+		</div>
+		<div class="form-group">
+			<%= f.label "Opis", class: "label-control" %>
+			<%= f.text_area :description, class: "form-control", disabled: true %>
+		</div>
+		<div class="form-group">
+			<%= f.label "Cijena" %>
+			<%= f.number_field :price, class: "form-control", disabled: true %>
+		</div>
+		<div class="form-group">
+			<%= f.label "Valuta" %>
+			<%= f.text_field :valute, class: "form-control", disabled: true %>
+		</div>
+		<div class="form-group">
+			<%= f.label "Javni događaj?" %>
+			<%= f.check_box :public, disabled: true %>
+		</div>
+		<div class="form-group">
+			<%= link_to "Natrag", events_path, class: "btn btn-md btn-danger" %>		
+		</div>
+	<% end %>
+  </div>
+</div>
