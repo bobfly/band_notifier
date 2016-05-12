@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  devise_for :users
+
   resources :events
   get "/all_events", to: "events#all_events"
 

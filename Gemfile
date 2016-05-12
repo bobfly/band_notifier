@@ -28,6 +28,10 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'will_paginate', github: 'jonatack/will_paginate'
 
+
+#auth
+gem 'devise', '4.0.0.rc1'
+
 # tooltips and popovers depend on tether
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

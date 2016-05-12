@@ -1,5 +1,6 @@
 #encoding UTF-8
 class EventsController < ApplicationController
+  before_action :authenticate_user!
   before_filter :set_event, except: [:index, :all_events, :new, :create]
 
   def index
