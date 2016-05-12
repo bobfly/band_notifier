@@ -35,7 +35,7 @@ set :repo_url, 'git@github.com:bobfly/band_notifier.git'
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-set :deploy_to, '/home/deploy/myapp'
+set :deploy_to, '/home/deploy/band_notifier'
 
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
