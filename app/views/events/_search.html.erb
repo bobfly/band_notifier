@@ -1,12 +1,21 @@
 <%= search_form_for @q do |f| %>
 <div class="form-inline">
 	<div class="form-group">
-	  <%= f.label "Ime svirke sadrži" %>
+	  <%= f.label "Ime svirke sadrži", class: "label-control" %>
 	  <%= f.search_field :name_cont, class: "form-control" %>		
 	</div>
 	<div class="form-group">
-	  <%= f.label "Pero" %>
+	  <%= f.label "Datum od", class: "label-control" %>
+	  <%= f.date_field :event_date_gteq, class: "form-control" %>
 	</div>
-  <%= f.submit "Traži" %>
+	<div class="form-group">
+		<%= f.label "Datum do", class: "label-control" %>
+		<%= f.date_field :event_date_lteq, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<%= f.label "Javni?", class: "label-control" %>
+		<%= f.check_box :public %>
+	</div>
+  <%= f.submit "Traži", class: "btn btn-md btn-primary" %>
 </div>
 <% end %>

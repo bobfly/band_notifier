@@ -25,7 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
 
-gem 'ransack'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'will_paginate', github: 'jonatack/will_paginate'
 
 # tooltips and popovers depend on tether
 source 'https://rails-assets.org' do
