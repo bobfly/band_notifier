@@ -14,7 +14,7 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 
 
- set :rbenv_type, :user # or :system, depends on your rbenv setup
+ set :rbenv_type, :system # or :system, depends on your rbenv setup
  set :rbenv_ruby, '2.3.0'
 
 # Include tasks from other gems included in your Gemfile
