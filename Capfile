@@ -7,6 +7,14 @@ require "capistrano/deploy"
 
 # If you are using rbenv add these lines:
  require 'capistrano/rbenv'
+
+
+require 'capistrano/bundler'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
+require 'capistrano/passenger'
+
+
  set :rbenv_type, :user # or :system, depends on your rbenv setup
  set :rbenv_ruby, '2.3.0'
 
