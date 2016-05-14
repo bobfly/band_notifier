@@ -62,4 +62,4 @@
 
 set :stage, :production
 
-server '46.101.237.41', user: 'deploy', roles: %w{web app}
+server '46.101.168.7', user: 'deploy', roles: %w{web app}
