@@ -28,6 +28,9 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'will_paginate', github: 'jonatack/will_paginate'
 
+# js
+gem "therubyracer"
+
 
 #auth
 gem 'devise', '4.0.0.rc1'
